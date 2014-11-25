@@ -10,15 +10,15 @@ function addUserPass () {
    htpasswd -b /path/to/passwords $1 $2
 }
 function addUser () {
-if grep -q "$1" /etc/program/passwd
+if grep -q "$1" /path/to/passwd
 then
-htpasswd -b /etc/program/passwd $1 $2
+htpasswd -b /path/to/passwd $1 $2
 fi
 
 typeset TMP_FILE=$( mktemp )
 touch "${TMP_FILE}"
-if cp -p /usr/bin/passwords/Aisloc_Directory/users "${TMP_FILE}"
-then sed -e '/^employees:/ s/$/ '"$1"'/' "${TMP_FILE}" > /usr/bin/passwords/Aisloc_Directory/users
+if cp -p /path/to/users "${TMP_FILE}"
+then sed -e '/^employees:/ s/$/ '"$1"'/' "${TMP_FILE}" > /path/to/users
 fi
 exit
 }
