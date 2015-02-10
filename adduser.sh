@@ -18,7 +18,7 @@ fi
 typeset TMP_FILE=$( mktemp )
 touch "${TMP_FILE}"
 if cp -p /path/to/users "${TMP_FILE}"
-then sed -e '/^employees:/ s/$/ '"$1"'/' "${TMP_FILE}" > /path/to/users
+then sed -e '/^users:/ s/$/ '"$1"'/' "${TMP_FILE}" > /path/to/users
 fi
 exit
 }
