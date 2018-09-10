@@ -1,0 +1,7 @@
+#######################################
+# Quick Script to Start Serving Flask #
+#	   $flaskrun app.py           #
+#######################################
+
+#! /usr/bin/env bash
+FLASK_APP=$1 FLASK_DEBUG=1 flask run
