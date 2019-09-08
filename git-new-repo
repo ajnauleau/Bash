@@ -1,7 +1,9 @@
 
 ## This bash script will create a new public 
 ## repository for a given github user. Exp:
-## gitreponew username git@github.com/reponame/
+##
+## git-new-repo username reponame
+## 
 
 #! /usr/bin/env bash
 mkdir $1
